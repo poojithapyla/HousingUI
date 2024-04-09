@@ -1,0 +1,69 @@
+<div class="card container col-6">
+    <div class="card-header text-center">
+        <h3>Register</h3>
+    </div>
+    <div class="card-body">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" formControlName="name">
+                <span *ngIf="!name?.valid && (name?.touched || userSubmit)" style="color: red;">
+                    Please provide name
+                </span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" formControlName="email">
+                <span *ngIf="!email.valid && (email.touched || userSubmit)" style="color: red;">
+                    <span *ngIf="email.hasError('required')">
+                        Please provide email
+                    </span>
+                    <span *ngIf="email.hasError('email')">
+                        Please provide valid email
+                    </span>
+                </span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" formControlName="password">
+                <span *ngIf="!password.valid && (password.touched || userSubmit)" style="color: red;">
+                    <span *ngIf="password.hasError('required')">
+                        Please provide password
+                    </span>
+                    <span *ngIf="password.hasError('minlength')">
+                        Password should not be less than 8 characters
+                    </span>
+                </span>
+            </div>
+            <div class="form-group">
+                <label for="password">Confirm Password</label>
+                <input type="password" class="form-control" formControlName="cpassword">
+                <span *ngIf="!cpassword.valid && (cpassword.touched || userSubmit)" style="color: red;">
+                    <span *ngIf="cpassword.hasError('required')">
+                        Please provide confirm password
+                    </span>
+                </span>
+                <span *ngIf="registerForm.hasError('notmatched') && cpassword.valid">
+                    Confirm Password not matched
+                </span>
+            </div>
+            <div class="form-group">
+                <label for="number">Phone number</label>
+                <input type="number" class="form-control" formControlName="pnumber">
+                <span *ngIf="!pnumber.valid && (pnumber.touched || userSubmit)" style="color: red;">
+                    <span *ngIf="pnumber.hasError('required')">
+                        Please provide the phone number
+                    </span>
+                    <span *ngIf="pnumber.hasError('maxlength')">
+                        Please provide 10 digit number
+                    </span>
+                </span>
+            </div>
+            <br>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary m-2">Register</button>
+                <button type="reset" class="btn btn-secondary">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>

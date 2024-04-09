@@ -1,0 +1,82 @@
+[
+    {
+      "Id": 1,
+      "SellRent":true,
+      "Name":"Birla House",
+      "Type": "House",
+      "Price": 1200000,
+      "image": "assets/images/1.jpg"
+    },
+    {
+      "Id": 2,
+      "SellRent":false,
+      "Name":"Guest House",
+      "Type": "House",
+      "Price": 89000,
+      "image": "assets/images/2.jpg"
+    },
+    {
+      "Id": 3,
+      "SellRent":true,
+      "Name":"Pent House",
+      "Type": "House",
+      "Price": 1800000,
+      "image": "assets/images/3.jpg"
+    },
+    {
+      "Id": 4,
+      "SellRent":false,
+      "Name":"Villa",
+      "Type": "House",
+      "Price": 50000,
+      "image": "assets/images/4.jpg"
+    },
+    {
+      "Id": 5,
+      "SellRent":true,
+      "Name":"Apartment",
+      "Type": "House",
+      "Price": 3200000,
+      "image": "assets/images/5.jpg"
+    },
+    {
+      "Id": 6,
+      "SellRent":false,
+      "Name":"Villa",
+      "Type": "House",
+      "Price": 100000,
+      "image": "assets/images/6.jpg"
+    },
+    {
+      "Id": 7,
+      "SellRent":true,
+      "Name":"Guest House",
+      "Type": "House",
+      "Price": 8800000,
+      "image": "assets/images/7.jpg"
+    },
+    {
+      "Id": 8,
+      "SellRent":false,
+      "Name":"Pent House",
+      "Type": "House",
+      "Price": 75000,
+      "image": "assets/images/8.jpg"
+    },
+    {
+      "Id": 9,
+      "SellRent":true,
+      "Name":"Hill House",
+      "Type": "House",
+      "Price": 5000000,
+      "image": "assets/images/9.jpg"
+    },
+    {
+      "Id": 10,
+      "SellRent":false,
+      "Name":"Tent House",
+      "Type": "House",
+      "Price": 500000,
+      "image":""
+    }
+]

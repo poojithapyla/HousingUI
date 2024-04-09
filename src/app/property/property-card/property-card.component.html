@@ -1,0 +1,20 @@
+<div class="card shadow">
+    <div class="prop">
+        <img class="card-img-top" *ngIf="details.image" src={{details.image}}>
+        <img class="card-img-top" *ngIf="!details.image" src="assets/images/default.jpg">
+        <ul class="list-inline text-center member animate">
+            <li class="list-inline-item">
+                <button class="btn btn-primary" routerLink="/property-detail/{{details.Id}}"><i class="fa-solid fa-envelope"></i></button>
+            </li>
+            <li class="list-inline-item">
+                <button class="btn btn-primary"><i class="fa-solid fa-phone"></i></button>
+            </li>
+        </ul>
+
+    </div>
+    <div class="card-body">
+        <h1>{{details.Name}}</h1>
+        <h3>{{details.Type}}</h3>
+        <h3>{{details.Price}}</h3>
+    </div>
+</div>

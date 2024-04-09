@@ -1,0 +1,9 @@
+.ng-invalid .ng-touched {
+    border: solid red;
+}
+.error {
+    color: red;
+}
+.ng-dirty .ng-valid {
+    border: solid green;
+}

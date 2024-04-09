@@ -1,0 +1,20 @@
+
+<div *ngIf="filteredProperties">
+    <div class="row">       
+            <div class="card shadow m-2 col-sm-3 w" *ngFor="let filteredProperties of filteredProperties">
+                <div class="prop">
+                    <img *ngIf="filteredProperties.image" class="card-img-top" src={{filteredProperties.image}}>
+                    <img *ngIf="!filteredProperties.image" class="card-img-top" src="assets/images/default.jpg">
+                    <div class="list-inline text-center member animate">
+                        <button class="btn btn-primary" routerLink="/property-detail/{{filteredProperties.Id}}"><i class="fa-solid fa-envelope"></i></button>
+                        <button class="btn btn-primary"><i class="fa-solid fa-phone"></i></button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3>{{filteredProperties.Name}}</h3>
+                    <h3>{{filteredProperties.Type}}</h3>
+                    <h3>{{filteredProperties.Price}}</h3>
+                </div>
+            </div>    
+    </div>
+</div>

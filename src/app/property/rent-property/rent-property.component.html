@@ -1,0 +1,19 @@
+<div *ngIf="filterProperties">
+    <div class="row">       
+            <div class="card shadow m-2 col-sm-3 w" *ngFor="let filter of filterProperties">
+                <div class="prop">
+                    <img *ngIf="filter.image" class="card-img-top" src={{filter.image}}>
+                    <img *ngIf="!filter.image" class="card-img-top" src="assets/images/default.jpg">
+                    <div class="list-inline text-center member animate">
+                        <button class="btn btn-primary" routerLink="/property-detail/{{filter.Id}}"><i class="fa-solid fa-envelope"></i></button>
+                        <button class="btn btn-primary"><i class="fa-solid fa-phone"></i></button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3>{{filter.Name}}</h3>
+                    <h3>{{filter.Type}}</h3>
+                    <h3>{{filter.Price}}</h3>
+                </div>
+            </div>    
+    </div>
+</div>
